@@ -1,23 +1,22 @@
 # SensorInspect
-## Usage
-First download the dataset and extract it to the ```data/``` directory. The default dataset is *hh102*.
+## Sử dụng
+Tải dataset về thư mục ```data/```. Dataset mặc định của repo là *hh102*.
 
 ### File splitter
-Split a large data file into smaller chunks. Its source code is ```quickseg.c```. An executable program ```seg``` was compiled from that source code.
-
-For directly splitting the default dataset (*hh102*), run the executable file by:
+Chia file data lớn thành nhiều file nhỏ. 
+Để trực tiếp chia dataset mặc định (*hh102*), chạy lệnh sau:
 ```
 ./seg
 ``` 
 
-To recompile the source code (e.g. custom modify, change dataset,... ), run:
+Để phiên dịch lại mã của chương trình chia file (ví dụ để sử dụng với dataset khác, fix bug, cải tiến,...):
 ```
 gcc -o seg quickseg.c 
 ```
 
 ### Plotter
 
-In ```main.py```, modify the start time, end time and the sensor list which we want to inspect and run. Note that the original dataset must be splitted before run this script.
+Trong file ```main.py```, chỉnh lại thời gian bắt đầu, thời gian kết thúc và các loại cảm biến sẽ được vẽ. Sau đó chạy file trên.
 ```python
 str_start = "2012-01-02 3:40:5.828388"
 str_end = "2012-01-02 23:20:59.828388"
